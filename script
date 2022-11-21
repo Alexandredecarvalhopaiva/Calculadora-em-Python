@@ -1,0 +1,52 @@
+print("\n******* Python Calculator *******")
+
+def add(x,y):
+    return x+y
+
+def sub(x,y):
+    return x-y
+
+def div(x,y):
+    return x/y 
+
+def mult(x,y):
+    return x*y
+
+def pot(x,y):
+    return x**y
+
+print(" Selecione o número de operação desejada: ")
+
+print('1-Soma \n2-Subtração \n3-Mutiplicação \n4-Divisão \n5-Potênciação  ')
+
+opcao = int(input('Digite sua opção [ 1 , 2 , 3 , 4 , 5 ]  : '))    
+
+while opcao != 1 and opcao != 2 and opcao != 3 and opcao != 4 and opcao !=5:
+    print('\nVocê digitou uma opcão inválida, tente novamente \n ')
+    print('1-Soma \n2-Subtração \n3-Mutiplicação \n4-Multiplicação \n5-Potênciação ')
+    opcao = int(input('Digite sua opção [ 1 , 2 , 3 , 4 , 5 ]  : '))    
+    print('\n')  
+    
+print(f'\nVocê digitou a opção: {opcao}')
+
+num1 = float(input('Digite o primeiro número: '))
+num2 = float(input('Digite o segundo número: '))
+
+if opcao == 1:   
+    print(f'O resultado da soma entre {num1} + {num2} =  {add(num1,num2)}')
+
+elif opcao == 2:
+    print(f'O resultado da subtração entre {num1} - {num2} = {sub(num1,num2)}')
+
+
+elif opcao == 3: 
+    print(f'O resultado da divisão entre {num1} * {num2} = {mult(num1,num2)}')
+
+elif opcao == 4:
+    if num2 == 0:
+        print('\n Não é possível dividir por 0 !')
+    print(f'O resultado da divisão entre {num1} / {num2} = {div(num1,num2)}')
+    
+
+elif opcao == 5: 
+    print(f'O resultado potência base {num1}^{num2} = {pot(num1,num2)}')
